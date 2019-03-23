@@ -8,7 +8,7 @@
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
             "image": {
-                "main": "/img/main-bupa.jpg",
+                "main": "http://priscillapi.com/img/test/bupa-desktop.jpg",
                 "teaser": "/img/teaser-bupa.jpg"
             },
             "link": {
@@ -34,7 +34,7 @@
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
             "image": {
-                "main": "/img/main-vw.jpg",
+                "main": "http://priscillapi.com/img/test/vw-desktop.jpg",
                 "teaser": "/img/teaser-vw.jpg"
             },
             "link": {
@@ -60,7 +60,7 @@
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
             "image": {
-                "main": "/img/main-nightpro.jpg",
+                "main": "http://priscillapi.com/img/test/nightpro-desktop.jpg",
                 "teaser": "/img/teaser-nightpro.jpg"
             },
             "link": {
@@ -86,7 +86,7 @@
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
             "image": {
-                "main": "/img/main-generations.jpg",
+                "main": "http://priscillapi.com/img/test/generations-desktop.jpg",
                 "teaser": "/img/teaser-generations.jpg"
             },
             "link": {
@@ -112,7 +112,7 @@
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
             "image": {
-                "main": "/img/main-eldorado.jpg",
+                "main": "http://priscillapi.com/img/test/eldorado-desktop.jpg",
                 "teaser": "/img/teaser-eldorado.jpg"
             },
             "link": {
@@ -138,7 +138,7 @@
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
             "image": {
-                "main": "/img/main-rwb.jpg",
+                "main": "http://priscillapi.com/img/test/rwb-desktop2.jpg",
                 "teaser": "/img/teaser-rwb.jpg"
             },
             "link": {
