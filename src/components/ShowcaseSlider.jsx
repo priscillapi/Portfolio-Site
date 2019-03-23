@@ -76,20 +76,39 @@ class ShowcaseSlider extends Component {
     });
   }
 
-  renderItemBulletPoints(items) {
+  renderNav() {
+    const navItems = [];
+    for (let i = 0; i < this.state.totalSlides; i++) {
+        let slideNumber = (i + 1);
+        let modifierClass = (this.state.isMobile) ? "" 
+                      :
+                      (
+                        i === this.state.activeSlide 
+                        ? "c-showcase-slider__nav-item--active" 
+                        : ""
+                      );
+        let classList = "c-showcase-slider__nav-item " + modifierClass;
+        navItems.push(<li className={classList} key={i}><span className="c-showcase-slider__nav-indicator"></span>{slideNumber}</li>);
+    }
+    return navItems;
+  }
+
+//   done
+  renderDetails(items) {
     const objToArray = Object.keys(items);
     const bulletPoints = objToArray.map(
       (key, index) =>
         items[key].length > 0 ? (
-          <li className="c-showcase-slider__bullet-point-item" key={index}>
-            <span className="c-showcase-slider__bullet-point-label">{key}:</span>
+          <li className="c-showcase-slider__details-item" key={index}>
+            <span className="c-showcase-slider__details-label">{key}:</span>
             {items[key]}
           </li>
         ) : null
     );
     return bulletPoints;
   }
-  renderItemRecognitions(items) {
+//   done
+  renderRecognitions(items) {
     const recognitions = items.map((item, index) => (
       <li className="c-showcase-slider__recognition-item" key={index}>
         {item}
@@ -97,37 +116,41 @@ class ShowcaseSlider extends Component {
     ));
     return recognitions;
   }
-  renderItemTechnologies(items) {
+//   done
+  renderTechnologies(items) {
     const technologies = items.map((item, index) => (
-      <li className="c-showcase-slider__technology" key={index}>
+      <li className="c-showcase-slider__technology-item" key={index}>
         {item}
       </li>
     ));
     return technologies;
   }
-  renderSupTitle(item, index) {
+//   done
+  renderSupTitleNav(item, index) {
     const slideNumber = index + 1;
     const supTitle = (
       <h4>{item} {slideNumber} of {this.state.totalSlides}</h4>
     );
     return supTitle;
   }
-  renderItemClassNames(index) {
+//   done
+// but i don't think I'll be needing this with the new design
+  renderSlideClassNames(index) {
     const modifierClass = (this.state.isMobile) ? "" 
                       :
                       (
                         index === this.state.activeSlide 
-                        ? "c-showcase-slider__item--active" 
+                        ? "c-showcase-slider__slide--active" 
                         : 
                         index === this.state.nextSlide 
-                        ? "c-showcase-slider__item--next" 
+                        ? "c-showcase-slider__slide--next" 
                         : 
                         index === this.state.prevSlide 
-                        ? "c-showcase-slider__item--prev" 
+                        ? "c-showcase-slider__slide--prev" 
                         : ""
                       );
 
-    const classList = "c-showcase-slider__item " + modifierClass;
+    const classList = "c-showcase-slider__slide " + modifierClass;
     return classList;
   }
 
@@ -140,6 +163,7 @@ class ShowcaseSlider extends Component {
   }
 
   render() {
+    //   done
     const showcaseSliderArrows = (
       <div className="c-showcase-slider__arrows">
         <div 
@@ -158,44 +182,40 @@ class ShowcaseSlider extends Component {
     );
 
 
-    const showcaseSliderItems = this.state.data.map((item, index) => (
+    const showcaseSliderSlides = this.state.data.map((item, index) => (
       <div 
-        className={this.renderItemClassNames(index)} 
+        className={this.renderSlideClassNames(index)} 
         key={item.ID}
       >
-        <div className="c-showcase-slider__teaser">
-          <h3 className="c-showcase-slider__title">{item.title}</h3>
-          <div className="c-showcase-slider__image" style={{backgroundImage: 'url("'+ item.image.teaser +'")'}}/>
+        <div className="c-showcase-slider__area-nav">
+            <ul className="c-showcase-slider__nav">
+                {this.renderNav()}
+            </ul>
         </div>
-        <div className="c-showcase-slider__content">
-          <div className="c-showcase-slider__left">
-            <div className="c-showcase-slider__image" style={{backgroundImage: 'url("'+ item.image.main +'")'}}/>
-            <div className="c-showcase-slider__cta">
-              <div className="c-showcase-slider__title c-showcase-slider__title--sup">
-                {this.renderSupTitle(item.supTitle, index)}
-              </div>
-              <div className="c-showcase-slider__pop-container c-showcase-slider__pop-container--title">
-                <h1 className="c-showcase-slider__title">{item.title}</h1>
-              </div>
-              {/* <div className="c-showcase-slider__pop-container">
-                <p className="c-showcase-slider__intro">{item.intro}</p>
-                <span class="link-wrapper">
-                  <a href={item.link.url} className="c-showcase-slider__link">
-                    {item.link.label}
-                  </a>
-                </span>
-              </div> */}
-            </div>
-            <ul className="c-showcase-slider__technologies">
-              {this.renderItemTechnologies(item.technologies)}
-            </ul>
-          </div>
-          <div className="c-showcase-slider__right">
+        <div className="c-showcase-slider__area-recognitions">
             <ul className="c-showcase-slider__recognitions">
-              {this.renderItemRecognitions(item.recognitions)}
+              {this.renderRecognitions(item.recognitions)}
             </ul>
-            <ul className="c-showcase-slider__bullet-points">
-              {this.renderItemBulletPoints(item.bulletPoints)}
+        </div>
+        <div className="c-showcase-slider__area-main">
+            <div className="c-showcase-slider__container"> 
+                <div className="c-showcase-slider__sup-title-nav mobile-only">
+                    <span className="c-showcase-slider__sup-title-nav-indicator"></span>
+                    {this.renderSupTitleNav(item.supTitle, index)}
+                </div>
+                <div className="c-showcase-slider__title">
+                    <h1>{item.title}</h1>
+                </div>
+                <div className="c-showcase-slider__sub-title">
+                    <h2>Website</h2>
+                </div>
+                {showcaseSliderArrows}
+            </div>
+            <div className="c-showcase-slider__image" style={{backgroundImage: 'url(' + item.image.main + ')'}}></div>
+        </div>
+        <div className="c-showcase-slider__area-info">
+            <ul className="c-showcase-slider__details">
+              {this.renderDetails(item.bulletPoints)}
             </ul>
             <p className="c-showcase-slider__description">
               {item.description}
@@ -205,15 +225,18 @@ class ShowcaseSlider extends Component {
                 </a>
               </span>
             </p>
-          </div>
+        </div>
+        <div className="c-showcase-slider__area-technologies">
+            <ul className="c-showcase-slider__technologies">
+              {this.renderTechnologies(item.technologies)}
+            </ul>
         </div>
       </div>
     ));
 
     const showcaseSlider = (
       <div className={this.renderShowcaseSliderClassNames()}>
-        {showcaseSliderItems}
-        {showcaseSliderArrows}
+        {showcaseSliderSlides}
       </div>
     );
 
