@@ -1,15 +1,16 @@
 {
     "showcase": [
         {
-            "ID": "GUID--002",
-            "title": "BUPA",
+            "ID": "GUID--006",
+            "title": "Resorts World",
             "supTitle": "Work File",
+            "subTitle": "Website",
             "intro": "Ut malesuada lectus non sem accumsan sagittis.",
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
             "image": {
-                "main": "http://priscillapi.com/img/test/bupa-desktop.jpg",
-                "teaser": "/img/teaser-bupa.jpg"
+                "main": "http://priscillapi.com/img/test/rwb-desktop2.jpg",
+                "teaser": "/img/teaser-rwb.jpg"
             },
             "link": {
                 "url": "#",
@@ -18,85 +19,7 @@
             "technologies": ["HTML", "CSS", "JS"],
             "recognitions": [],
             "bulletPoints": {
-                "client": "BUPA",
-                "agency": "M8",
-                "date": "",
-                "project": "",
-                "company": "",
-                "role": "Web Developer"
-            }
-        },
-        {
-            "ID": "GUID--003",
-            "title": "VW",
-            "supTitle": "Work File",
-            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
-            "description":
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
-            "image": {
-                "main": "http://priscillapi.com/img/test/vw-desktop.jpg",
-                "teaser": "/img/teaser-vw.jpg"
-            },
-            "link": {
-                "url": "#",
-                "label": "Learn More"
-            },
-            "technologies": ["HTML", "CSS", "JS"],
-            "recognitions": [],
-            "bulletPoints": {
-                "client": "VW",
-                "agency": "M8",
-                "date": "",
-                "project": "",
-                "company": "",
-                "role": "Web Developer"
-            }
-        },
-        {
-            "ID": "GUID--004",
-            "title": "NightPro",
-            "supTitle": "Work File",
-            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
-            "description":
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
-            "image": {
-                "main": "http://priscillapi.com/img/test/nightpro-desktop.jpg",
-                "teaser": "/img/teaser-nightpro.jpg"
-            },
-            "link": {
-                "url": "#",
-                "label": "Learn More"
-            },
-            "technologies": ["HTML", "CSS", "JS"],
-            "recognitions": [],
-            "bulletPoints": {
-                "client": "",
-                "agency": "",
-                "date": "2015-2016",
-                "project": "",
-                "company": "NightPro",
-                "role": "Full Stack Developer"
-            }
-        },
-        {
-            "ID": "GUID--005",
-            "title": "Generations",
-            "supTitle": "Work File",
-            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
-            "description":
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
-            "image": {
-                "main": "http://priscillapi.com/img/test/generations-desktop.jpg",
-                "teaser": "/img/teaser-generations.jpg"
-            },
-            "link": {
-                "url": "#",
-                "label": "Learn More"
-            },
-            "technologies": ["HTML", "CSS", "JS"],
-            "recognitions": [],
-            "bulletPoints": {
-                "client": "Karisma",
+                "client": "Resorts World Bimini",
                 "agency": "Worldmedia Interactive",
                 "date": "",
                 "project": "",
@@ -105,9 +28,10 @@
             }
         },
         {
-            "ID": "GUID--006",
+            "ID": "GUID--005",
             "title": "El Dorado",
             "supTitle": "Work File",
+            "subTitle": "Website | Landing Page | Banner",
             "intro": "Ut malesuada lectus non sem accumsan sagittis.",
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
@@ -131,15 +55,16 @@
             }
         },
         {
-            "ID": "GUID--007",
-            "title": "RWB",
+            "ID": "GUID--004",
+            "title": "Generations",
             "supTitle": "Work File",
+            "subTitle": "Website | Landing Page",
             "intro": "Ut malesuada lectus non sem accumsan sagittis.",
             "description":
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
             "image": {
-                "main": "http://priscillapi.com/img/test/rwb-desktop2.jpg",
-                "teaser": "/img/teaser-rwb.jpg"
+                "main": "http://priscillapi.com/img/test/generations-desktop.jpg",
+                "teaser": "/img/teaser-generations.jpg"
             },
             "link": {
                 "url": "#",
@@ -148,12 +73,93 @@
             "technologies": ["HTML", "CSS", "JS"],
             "recognitions": [],
             "bulletPoints": {
-                "client": "RWB",
+                "client": "Karisma",
                 "agency": "Worldmedia Interactive",
                 "date": "",
                 "project": "",
                 "company": "",
                 "role": "Full Stack Developer"
+            }
+        },
+        {
+            "ID": "GUID--003",
+            "title": "NightPro",
+            "supTitle": "Work File",
+            "subTitle": "Website | Emails",
+            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
+            "description":
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
+            "image": {
+                "main": "http://priscillapi.com/img/test/nightpro-desktop.jpg",
+                "teaser": "/img/teaser-nightpro.jpg"
+            },
+            "link": {
+                "url": "#",
+                "label": "Learn More"
+            },
+            "technologies": ["HTML", "CSS", "JS"],
+            "recognitions": [],
+            "bulletPoints": {
+                "client": "",
+                "agency": "",
+                "date": "2015-2016",
+                "project": "",
+                "company": "NightPro",
+                "role": "Full Stack Developer"
+            }
+        },
+        {
+            "ID": "GUID--002",
+            "title": "Volkswagen",
+            "supTitle": "Work File",
+            "subTitle": "Website",
+            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
+            "description":
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
+            "image": {
+                "main": "http://priscillapi.com/img/test/vw-desktop.jpg",
+                "teaser": "/img/teaser-vw.jpg"
+            },
+            "link": {
+                "url": "#",
+                "label": "Learn More"
+            },
+            "technologies": ["HTML", "CSS", "JS"],
+            "recognitions": [],
+            "bulletPoints": {
+                "client": "Volkswagen",
+                "agency": "M8",
+                "date": "",
+                "project": "",
+                "company": "",
+                "role": "Web Developer"
+            }
+        },
+        {
+            "ID": "GUID--001",
+            "title": "BUPA",
+            "supTitle": "Work File",
+            "subTitle": "Website | Quote Engine",
+            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
+            "description":
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
+            "image": {
+                "main": "http://priscillapi.com/img/test/bupa-desktop.jpg",
+                "teaser": "/img/teaser-bupa.jpg"
+            },
+            "link": {
+                "url": "#",
+                "label": "Learn More"
+            },
+            "technologies": ["HTML", "CSS", "JS"],
+            "recognitions": [],
+            "bulletPoints": {
+                "client": "BUPA",
+                "agency": "M8",
+                "date": "",
+                "project": "",
+                "company": "",
+                "role": "Web Developer"
             }
         }
     ]

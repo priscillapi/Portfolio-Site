@@ -168,12 +168,13 @@
   h1 {
     font-weight: 900;
     font-size: 5rem;
+    line-height: 5.5rem;
     // margin: 0 15px 0.5rem 80px;
   }
   
   h2 {
     font-weight: 300;
-    font-size: 2.25rem;
+    font-size: 2rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     // margin: 5px 15px 35px 50px;
@@ -196,6 +197,11 @@
     letter-spacing: 0.1rem;
     line-height: 1.25rem;
     font-weight: 300;
+  }
+
+  a {
+    color: #2d2d2d;
+    text-decoration: none;
   }
   
   ul, li {
@@ -224,14 +230,31 @@
       display: block;
     }
   }
+
+  @media (max-width: 1200px) {
+      h2 {
+        font-size: 1.75rem;
+      }
+  }
   
   // TABLET
   @media (max-width: 1024px) {
     h1 {
       font-size: 4.5rem;
+      line-height: 5rem;
     }
     h2{
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+        line-height: 3.6rem;
+    }
+    h2 {
+        font-size: 1rem;
     }
   }
   
@@ -449,43 +472,136 @@
             background-position: right;
             background-size: cover;
         }
-      
-      &--desktop {
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 65%;
-        background: url(http://priscillapi.com/img/test/rwb-desktop.jpg);
-        background: url(http://priscillapi.com/img/test/eldorado-desktop.jpg);
-        background: url(http://priscillapi.com/img/test/generations-desktop.jpg);
-        background: url(http://priscillapi.com/img/test/nightpro-desktop.jpg);
-        background: url(http://priscillapi.com/img/test/vw-desktop.jpg);
-        background: url(http://priscillapi.com/img/test/bupa-desktop.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right;
-        @media (max-width: 768px) {
-          display: none;
+
+        // RWB
+        #{ $self }__slide-GUID--006 & {
+            @media (max-width: 1440px) {
+                background-position: -350px 0;
+            }
+
+            @media (max-width: 1200px) {
+                background-position: -400px 0;
+            }
+
+            @media (max-width: 1090px) {
+                background-position: -475px 0;
+            }
+
+            @media (max-width: 1024px) {
+                background-position: -375px 0;
+            }
+
+            @media (max-width: 768px) {
+                background-position: 0 0;
+            }
         }
-      }
-      
-      &--mobile {
-        display: none;
-        @media (max-width: 768px) {
-          display: block;
-          height: 250px;
-          background: url(http://priscillapi.com/img/test/rwb-desktop.jpg);
-        // background: url(http://priscillapi.com/img/test/eldorado-desktop.jpg);
-        // background: url(http://priscillapi.com/img/test/generations-desktop.jpg);
-        // background: url(http://priscillapi.com/img/test/nightpro-desktop.jpg);
-        // background: url(http://priscillapi.com/img/test/vw-desktop.jpg);
-        // background: url(http://priscillapi.com/img/test/bupa-desktop.jpg);
-          background-repeat: no-repeat;
-          background-position: right;
-          background-size: cover;
+
+        // EL DORADO
+        #{ $self }__slide-GUID--005 & {
+            @media (max-width: 1200px) {
+                background-position: -500px 0;
+            }
+
+            @media (max-width: 1024px) {
+                background-position: right;
+            }
         }
-      }
+
+        // GENERATIONS
+        #{ $self }__slide-GUID--004 & {
+            @media (max-width: 1440px) {
+                background-position: -475px 0;
+            }
+
+            @media (max-width: 1200px) {
+                background-position: -525px 0;
+            }
+
+            @media (max-width: 1090px) {
+                background-position: -575px 0;
+            }
+
+            @media (max-width: 1024px) {
+                background-position: right;
+            }
+
+            @media (max-width: 991px) {
+                background-position: -475px 0;
+            }
+
+            @media (max-width: 768px) {
+                background-position: 0 -60px;
+            }
+
+            @media (max-width: 685px) {
+                background-position: right;
+            }
+        }
+
+        // NIGHTPRO
+        #{ $self }__slide-GUID--003 & {
+            @media (max-width: 1440px) {
+                background-position: -300px 0;
+            }
+
+            @media (max-width: 1024px) {
+                background-position: -360px 0;
+            }
+
+            @media (max-width: 768px) {
+                background-position: right;
+            }
+        }
+
+        // VOLKSWAGEN
+        #{ $self }__slide-GUID--002 & {
+            @media (max-width: 1880px) {
+                background-position: -300px 0;
+            }
+
+            @media (max-width: 1440px) {
+                background-position: -375px 0;
+            }
+
+            @media (max-width: 1200px) {
+                background-position: -450px 0;
+            }
+
+            @media (max-width: 1090px) {
+                background-position: -485px 0;
+            }
+
+            @media (max-width: 1024px) {
+                background-position: -285px 0;
+            }
+
+            @media (max-width: 991px) {
+                background-position: -315px 0;
+            }
+
+            @media (max-width: 850px) {
+                background-position: -365px 0;
+            }
+
+            @media (max-width: 768px) {
+                background-position: right;
+            }
+        }
+
+        // BUPA 
+        #{ $self }__slide-GUID--001 & {
+            @media (max-width: 1200px) {
+                background-position: -590px 0;
+            }
+
+            @media (max-width: 1090px) {
+                background-position: -620px 0;
+            }
+
+            @media (max-width: 1024px) {
+                background-position: right;
+            }
+        }
     }
     
     &__container {
@@ -512,7 +628,11 @@
       
       #{ $self }__sup-title-nav-indicator {
         width: 50px;
+        height: 2px;
         background-color: #000;
+        display: inline-block;
+        margin-bottom: 0.2rem;
+        margin-right: 0.5rem;
       }
       
       h4 {
@@ -535,9 +655,6 @@
     &__sub-title {
       h2 {
         margin: 0;
-        @media (max-width: 768px) {
-          font-size: 1.75rem;
-        }
       }
     }
   
@@ -593,6 +710,10 @@
         &:not(:last-of-type) {
           margin-bottom: 0.75em;
         }
+      }
+
+      &-label {
+        margin-right: 0.5rem;
       }
     }
     

@@ -52,6 +52,15 @@ class ShowcaseSlider extends Component {
     });
   }
 
+  goToNavItemSelected(slide) {
+    // classes should be added for animations
+    // these should be triggered by a state(boolean)
+    this.setState({
+      isAnimating: true,
+      activeSlide: slide
+    });
+  }
+
   animateSlider() {
     
     
@@ -88,12 +97,19 @@ class ShowcaseSlider extends Component {
                         : ""
                       );
         let classList = "c-showcase-slider__nav-item " + modifierClass;
-        navItems.push(<li className={classList} key={i}><span className="c-showcase-slider__nav-indicator"></span>{slideNumber}</li>);
+        navItems.push(
+            <li 
+                className={classList} 
+                key={i} 
+                onClick={() => {this.goToNavItemSelected(i);}} >
+                <span className="c-showcase-slider__nav-indicator"></span>
+                {slideNumber}
+            </li>
+            );
     }
     return navItems;
   }
 
-//   done
   renderDetails(items) {
     const objToArray = Object.keys(items);
     const bulletPoints = objToArray.map(
@@ -107,7 +123,7 @@ class ShowcaseSlider extends Component {
     );
     return bulletPoints;
   }
-//   done
+
   renderRecognitions(items) {
     const recognitions = items.map((item, index) => (
       <li className="c-showcase-slider__recognition-item" key={index}>
@@ -116,7 +132,7 @@ class ShowcaseSlider extends Component {
     ));
     return recognitions;
   }
-//   done
+
   renderTechnologies(items) {
     const technologies = items.map((item, index) => (
       <li className="c-showcase-slider__technology-item" key={index}>
@@ -125,7 +141,7 @@ class ShowcaseSlider extends Component {
     ));
     return technologies;
   }
-//   done
+
   renderSupTitleNav(item, index) {
     const slideNumber = index + 1;
     const supTitle = (
@@ -133,24 +149,26 @@ class ShowcaseSlider extends Component {
     );
     return supTitle;
   }
-//   done
-// but i don't think I'll be needing this with the new design
-  renderSlideClassNames(index) {
+
+// i don't think I'll be needing this with the new design
+  renderSlideClassNames(index, ID) {
     const modifierClass = (this.state.isMobile) ? "" 
                       :
                       (
                         index === this.state.activeSlide 
-                        ? "c-showcase-slider__slide--active" 
+                        ? " c-showcase-slider__slide--active" 
                         : 
                         index === this.state.nextSlide 
-                        ? "c-showcase-slider__slide--next" 
+                        ? " c-showcase-slider__slide--next" 
                         : 
                         index === this.state.prevSlide 
-                        ? "c-showcase-slider__slide--prev" 
+                        ? " c-showcase-slider__slide--prev" 
                         : ""
                       );
 
-    const classList = "c-showcase-slider__slide " + modifierClass;
+    const slideID = "c-showcase-slider__slide-" + ID;
+
+    const classList = "c-showcase-slider__slide " + slideID + modifierClass;
     return classList;
   }
 
@@ -163,20 +181,15 @@ class ShowcaseSlider extends Component {
   }
 
   render() {
-    //   done
     const showcaseSliderArrows = (
       <div className="c-showcase-slider__arrows">
         <div 
           className="c-showcase-slider__arrow c-showcase-slider__arrow--left" 
-          onClick={() => {
-            this.prev();
-          }}
+          onClick={() => {this.prev();}}
         />
         <div 
           className="c-showcase-slider__arrow c-showcase-slider__arrow--right" 
-          onClick={() => {
-            this.next();
-          }}
+          onClick={() => {this.next();}}
         />
       </div>
     );
@@ -184,7 +197,7 @@ class ShowcaseSlider extends Component {
 
     const showcaseSliderSlides = this.state.data.map((item, index) => (
       <div 
-        className={this.renderSlideClassNames(index)} 
+        className={this.renderSlideClassNames(index, item.ID)} 
         key={item.ID}
       >
         <div className="c-showcase-slider__area-nav">
@@ -207,7 +220,7 @@ class ShowcaseSlider extends Component {
                     <h1>{item.title}</h1>
                 </div>
                 <div className="c-showcase-slider__sub-title">
-                    <h2>Website</h2>
+                    <h2>{item.subTitle}</h2>
                 </div>
                 {showcaseSliderArrows}
             </div>
