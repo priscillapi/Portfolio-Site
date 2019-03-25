@@ -1,16 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './styles/main.scss';
 
-import ShowcaseSlider from './components/ShowcaseSlider';
+import Header from './sections/Header';
+import About from './sections/About';
+import Projects from './sections/Projects';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <ShowcaseSlider />
-      </div>
-    );
-  }
+const App = () => {
+  const Portfolio = (
+    <div className='p-portfolio'>
+      <Header />
+      <About />
+      <Projects />
+    </div>
+  );
+
+  return Portfolio;
 }
 
 export default App;

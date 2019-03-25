@@ -253,7 +253,7 @@ class ShowcaseSlider extends Component {
       </div>
     );
 
-    return <div>{showcaseSlider}</div>;
+    return showcaseSlider;
   }
 }
 
