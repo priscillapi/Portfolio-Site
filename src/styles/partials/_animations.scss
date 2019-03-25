@@ -1,0 +1,37 @@
+// Slide Left to Right
+// Normal state
+// Delayed modifier
+.a-slide-ltr {
+
+    &--delayed {
+
+    }
+}
+
+// Slide Bottom to Top
+// Hiding State
+// Showing State
+.a-slide-btt {
+    .a-is-animating & {
+
+    }
+}
+
+// Zoom In
+// Hiding State
+// Showing State
+.a-zoom-in {
+    .a-is-animating & {
+
+    }
+}
+
+// Fade In
+.a-fade-in {
+    
+}
+
+// Fade Out
+.a-fade-out {
+
+}
