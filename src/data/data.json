@@ -162,6 +162,49 @@
                 "role": "Web Developer"
             }
         }
+    ],
+    "scrollText": [
+        {
+            "ID": "d-scroll-text__technologies",
+            "items": [
+                "HTML5",
+                "CSS3",
+                "Sass",
+                "PHP",
+                "JavaScript",
+                "jQuery",
+                "React",
+                "AngularJS",
+                "Express",
+                "SQL",
+                "GSAP",
+                "WordPress",
+                "Handlebars",
+                "AWS",
+                "Node",
+                "JSON",
+                "API",
+                "Gulp",
+                "JAVA",
+                "C++",
+                "Photoshop",
+                "Illustrator",
+                "Sublime",
+                "Sketch",
+                "Terminal",
+                "GIT"
+            ]
+        },
+        {
+            "ID": "d-scroll-text__names",
+            "items": [
+                "Priscilla",
+                "Pi",
+                "Web Developer",
+                "Web Designer",
+                "Front-End Developer",
+                "Unicorn"
+            ]
+        }
     ]
 }
-  

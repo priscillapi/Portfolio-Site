@@ -1,0 +1,32 @@
+.link-wrapper {
+    margin: 0 0.5rem;
+    display: inline-block;
+    cursor: pointer;
+    
+    a {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+  
+      &::before {
+        content: '';
+        width: 110%;
+        height: 75%;
+        background-color: #e8ef4b;
+        position: absolute;
+        bottom: -4px;
+        left: -5px;
+        z-index: -1;
+        transition: all 0.3s ease;
+      }
+  
+      &:hover {
+        &::before {
+          height: 145%;
+        }
+      }
+    }
+  }
