@@ -1,37 +1,171 @@
 // Slide Left to Right
 // Normal state
 // Delayed modifier
-.a-slide-ltr {
-
-    &--delayed {
-
+.a-slide {
+    &__ltr {
+        position: relative;
+        
+        &--animating-in {
+            background-color: #444444d9;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-animation: scale-in-hor-ltr 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: scale-in-hor-ltr 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        &--animating-out {
+            -webkit-animation: scale-out-hor-ltr 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-out-hor-ltr 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        }
+    }
+    &__content {
+        opacity: 0;
+        &--reveal {
+            // opacity: 1;
+            -webkit-animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
+    }
+    &__image {
+        opacity: 0;
+        // transition: opacity 1s ease;
+        &--reveal {
+            // transition: opacity 2s ease;
+            // opacity: 1;
+            -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        }
     }
 }
+
+
+
+/**
+ * ----------------------------------------------
+ * animation: scale in horizontal left to right
+ * ----------------------------------------------
+ */
+ @-webkit-keyframes scale-in-hor-ltr {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-hor-ltr {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 0% 0%;
+              transform-origin: 0% 0%;
+      opacity: 1;
+    }
+  }
+  
+/**
+ * ----------------------------------------------
+ * animation: scale out horizontal left to right
+ * ----------------------------------------------
+ */
+ @-webkit-keyframes scale-out-hor-ltr {
+    0% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-out-hor-ltr {
+    0% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 100% 100%;
+              transform-origin: 100% 100%;
+      opacity: 1;
+    }
+  }
+
+
+ /**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
 
 // Slide Bottom to Top
 // Hiding State
 // Showing State
-.a-slide-btt {
-    .a-is-animating & {
+// .a-slide-btt {
+//     .a-is-animating & {
 
-    }
-}
+//     }
+// }
 
 // Zoom In
 // Hiding State
 // Showing State
-.a-zoom-in {
-    .a-is-animating & {
+// .a-zoom-in {
+//     .a-is-animating & {
 
-    }
-}
+//     }
+// }
 
 // Fade In
-.a-fade-in {
+// .a-fade-in {
     
-}
+// }
 
 // Fade Out
-.a-fade-out {
+// .a-fade-out {
 
-}
+// }

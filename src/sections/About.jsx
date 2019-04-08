@@ -1,11 +1,23 @@
-import React from "react";
+import React, { Component } from "react";
 import Title from '../components/Title';
 import Button from '../components/Button';
 
-const About = () => {
+class About extends Component {
+  constructor(props) {
+    super(props);
+    console.log('this.props: ', this.props);
+  }
+  renderClassNames() {
+    // const inViewClassName = (this.props.isFullyInViewport || this.props.isAboveViewport) ? " l-section--in-view" : "";
+    // const classList = 'l-section l-section--about' + inViewClassName; 
+    const inViewClassName = (true) ? " l-section--in-view" : "";
+    const classList = 'l-section l-section--about' + inViewClassName; 
+    return classList;
+  }
+  render() {
     const aboutSection = (
-      <div className='l-section l-section--about'>
-        <Title title='About' position='right'/>
+      <div className={this.renderClassNames()} >
+        <Title title='About' position='right' />
         <div className='l-container l-container--center-horizontal'>
           <h1>Priscilla Pi</h1>
           <h2>Most just call her Pi [pahy].</h2>
@@ -17,6 +29,7 @@ const About = () => {
     );
 
     return aboutSection;
+  }
 }
 
 export default About;

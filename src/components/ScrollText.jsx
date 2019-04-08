@@ -8,10 +8,23 @@ class ScrollText extends Component {
         this.state = {
             data: data.scrollText,
         };
+        this.renderWrapperWidth = this.renderWrapperWidth.bind(this);
+    }
+
+    componentDidMount() {
+        this.renderWrapperWidth();
+    }
+
+    renderWrapperWidth() {
+        const scrollTextWrappers = $('.c-scroll-text__wrapper');
+        scrollTextWrappers.map((index, wrapper) => {
+            let wrapperWidth = wrapper.clientWidth;
+            $(wrapper).width(wrapperWidth);
+        });
     }
 
     renderClassNames() {
-        const directionModifierClass = "a-scroll--" + this.props.scrollDirection;
+        const directionModifierClass = "c-scroll-text__wrapper--" + this.props.scrollDirection;
         const primaryModifierClass = (this.props.primary === 'yes') ? " c-scroll-text__wrapper--primary" : "";
         const classList = "c-scroll-text__wrapper" + primaryModifierClass + " a-scroll " + directionModifierClass;
         return classList;
@@ -22,13 +35,13 @@ class ScrollText extends Component {
         this.state.data.map((scrollGroup) => {
             if(scrollGroup.ID === this.props.groupID) {
                 items = scrollGroup.items.map((item, index) => (
-                    <div className="c-scroll-text__item" key={index}>
-                        {item}
+                    <div className="c-scroll-text__item">
+                        <span>{item}</span>
                     </div>
                 ));
             }
         });
-        return items;
+        return items.concat(items).concat(items);
     }
 
     render() {

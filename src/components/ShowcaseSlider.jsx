@@ -14,16 +14,18 @@ class ShowcaseSlider extends Component {
       nextSlide: 0,
       prevSlide: 0,
       isAnimating: true,
-      isMobile: ($(window).width() < 768) ? true : false
+      isMobile: (window.innerWidth <= 768) ? true : false
     };
 
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
     this.setNextSlideState = this.setNextSlideState.bind(this);
     this.setPrevSlideState = this.setPrevSlideState.bind(this);
+    this.onWindowResize = this.onWindowResize.bind(this);
   }
 
   componentDidMount() {
+    window.addEventListener('resize', this.onWindowResize);
     this.setNextSlideState();
     this.setPrevSlideState();
   }
@@ -32,9 +34,28 @@ class ShowcaseSlider extends Component {
       this.setNextSlideState();
       this.setPrevSlideState();
     }
+    this.animateSlider();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onWindowResize);
+  }
+
+  onWindowResize() {
+    console.log('onWindowResize');
+    if(window.innerWidth <= 768 && !this.state.isMobile) {
+      this.setState({
+        isMobile: true
+      });
+    } else if(window.innerWidth > 768 && this.state.isMobile) {
+      this.setState({
+        isMobile: true
+      });
+    }
   }
 
   next() {
+    this.animateOut();
+    // this.animateSlider();
     // classes should be added for animations
     // these should be triggered by a state(boolean)
     this.setState({
@@ -62,12 +83,42 @@ class ShowcaseSlider extends Component {
   }
 
   animateSlider() {
-    
-    
-    // very end
-    this.setState({
-      isAnimating: false
+    const elementsToAnimate = $('.c-showcase-slider__slide--active .a-slide__ltr');
+    const imageToAnimate = $('.c-showcase-slider__slide--active .a-slide__image');
+    elementsToAnimate.map((index, element) => {
+      $(element).append('<div class="a-slide__ltr--animating-in"></div>');
     });
+    $(imageToAnimate).addClass('a-slide__image--reveal');
+    setTimeout(() => {
+      elementsToAnimate.map((index, element) => {
+        const elementsToReveal = $(element).find('.a-slide__content');
+        const elementToAnimateOut = $(element).find('.a-slide__ltr--animating-in');
+        $(elementToAnimateOut).addClass('a-slide__ltr--animating-out');
+        elementsToReveal.map((index, element) => {
+          $(element).addClass('a-slide__content--reveal');
+        });
+      });
+      this.removeAnimation();
+    }, 700);
+  }
+
+  removeAnimation() {
+    const animatedElements = $('.a-slide__ltr');
+    const prevContentElements = $('.c-showcase-slider__slide--prev .a-slide__content--reveal');
+    const nextContentElements = $('.c-showcase-slider__slide--next .a-slide__content--reveal');
+    const contentElements = (prevContentElements.length > 0) ? prevContentElements : nextContentElements;
+    setTimeout(() => { 
+      animatedElements.map((index, element) => {
+        $(element).find('.a-slide__ltr--animating-in.a-slide__ltr--animating-out').remove();
+      });
+      contentElements.map((index, element) => {
+        $(element).removeClass('a-slide__content--reveal');
+      });
+    }, 700);
+  }
+
+  animateOut() {
+
   }
 
   setNextSlideState() {
@@ -115,9 +166,9 @@ class ShowcaseSlider extends Component {
     const bulletPoints = objToArray.map(
       (key, index) =>
         items[key].length > 0 ? (
-          <li className="c-showcase-slider__details-item" key={index}>
-            <span className="c-showcase-slider__details-label">{key}:</span>
-            {items[key]}
+          <li className="c-showcase-slider__details-item a-slide__ltr" key={index}>
+            <span className="c-showcase-slider__details-label a-slide__content">{key}:</span>
+            <span className="a-slide__content">{items[key]}</span>
           </li>
         ) : null
     );
@@ -135,7 +186,7 @@ class ShowcaseSlider extends Component {
 
   renderTechnologies(items) {
     const technologies = items.map((item, index) => (
-      <li className="c-showcase-slider__technology-item" key={index}>
+      <li className="c-showcase-slider__technology-item a-slide__content" key={index}>
         {item}
       </li>
     ));
@@ -150,9 +201,8 @@ class ShowcaseSlider extends Component {
     return supTitle;
   }
 
-// i don't think I'll be needing this with the new design
   renderSlideClassNames(index, ID) {
-    const modifierClass = (this.state.isMobile) ? "" 
+    const modifierClass = (this.state.isMobile) ? " c-showcase-slider__slide--active" 
                       :
                       (
                         index === this.state.activeSlide 
@@ -216,23 +266,23 @@ class ShowcaseSlider extends Component {
                     <span className="c-showcase-slider__sup-title-nav-indicator"></span>
                     {this.renderSupTitleNav(item.supTitle, index)}
                 </div>
-                <div className="c-showcase-slider__title">
-                    <h1>{item.title}</h1>
+                <div className="c-showcase-slider__title a-slide__ltr">
+                    <h1 className="a-slide__content">{item.title}</h1>
                 </div>
-                <div className="c-showcase-slider__sub-title">
-                    <h2>{item.subTitle}</h2>
+                <div className="c-showcase-slider__sub-title a-slide__ltr">
+                    <h2 className="a-slide__content">{item.subTitle}</h2>
                 </div>
                 {showcaseSliderArrows}
             </div>
-            <div className="c-showcase-slider__image" style={{backgroundImage: 'url(' + item.image.main + ')'}}></div>
+            <div className="c-showcase-slider__image a-slide__image" style={{backgroundImage: 'url(' + item.image.main + ')'}}></div>
         </div>
         <div className="c-showcase-slider__area-info">
             <ul className="c-showcase-slider__details">
               {this.renderDetails(item.bulletPoints)}
             </ul>
-            <p className="c-showcase-slider__description">
-              {item.description}
-              <span className="link-wrapper">
+            <p className="c-showcase-slider__description a-slide__ltr">
+              <span className="a-slide__content">{item.description}</span>
+              <span className="link-wrapper a-slide__content">
                 <a href={item.link.url} className="c-showcase-slider__link">
                   {item.link.label}
                 </a>
@@ -240,7 +290,7 @@ class ShowcaseSlider extends Component {
             </p>
         </div>
         <div className="c-showcase-slider__area-technologies">
-            <ul className="c-showcase-slider__technologies">
+            <ul className="c-showcase-slider__technologies a-slide__ltr">
               {this.renderTechnologies(item.technologies)}
             </ul>
         </div>
