@@ -13,7 +13,6 @@ const App = () => {
       <About />
       <Projects />
       <Footer />
-      <p>Click here for about page</p>
     </div>
   );
 
