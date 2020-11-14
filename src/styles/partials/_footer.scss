@@ -1,0 +1,38 @@
+.l-section--footer {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 1rem 0;
+    .l-container {
+        position: relative;
+    }
+    p {
+        display: inline-block;
+        margin: 0;
+        @media only screen and (max-width: 768px) {
+            display: block;
+            text-align: center;
+            font-size: 0.65rem;
+            span {
+                display: block;
+            }
+        }
+    }
+    .c-social-media {
+        position: absolute;
+        right: 0;
+        top: 0;
+        i {
+            color: #fff;
+            &:hover {
+                color: #e8ef4b;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            display: block;
+            position: unset;
+            margin: 1.5rem auto 1rem;
+            width: fit-content;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.o {
+    &-logo {
+        cursor: pointer;
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+        width: 50px;
+
+        @media only screen and (max-width: 768px) {
+            top: 2rem;
+            left: 2rem;
+            width: 40px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.c-social-media {
+    a {
+        margin-right: 1rem;
+
+        @media only screen and (max-width: 525px) {
+            margin-right: 1.75rem;
+            font-size: 1.25rem;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        i {
+            color: #ccc;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                color: #2d2d2d;
+            }
+        }
+
+    }
+
+    .l-container & {
+        position: absolute;
+        top: 2.25rem;
+        right: 3rem;
+
+        @media only screen and (max-width: 525px) {
+            top: 2.25rem;
+            right: 2rem;
+        }
+    }
+
+}

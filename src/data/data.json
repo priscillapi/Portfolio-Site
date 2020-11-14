@@ -5,19 +5,34 @@
             "title": "Resorts World",
             "supTitle": "Work File",
             "subTitle": "Website",
-            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
+            "highlights": [
+                "Custom complex gallery",
+                "Integrated CMS access",
+                "Website animations",
+                "Custom form elements",
+                "Custom modal",
+                "Booking flow algorithm",
+                "Custom WordPress Theme"
+            ],
             "description":
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
+                "Break Free To A Bahamas Vacation Like No Other. Enjoy Our Rooftop Pool, Casino, Lounges, & Much More!",
             "image": {
-                "main": "http://priscillapi.com/img/test/rwb-desktop2.jpg",
+                "main": "http://priscillapi.com/img/portfolio/rwb-desktop2.jpg",
                 "teaser": "/img/teaser-rwb.jpg"
             },
-            "link": {
-                "url": "#",
-                "label": "Learn More"
-            },
-            "technologies": ["HTML", "CSS", "JS"],
-            "recognitions": [],
+            "links": [
+                {
+                    "url": "rwbimini.com",
+                    "label": "Visit Website"
+                }
+            ],
+            "technologies": ["Sass", "JS", "jQuery", "PHP", "GSAP"],
+            "recognitions": [
+                {
+                    "url": "https://www.w3award.com/winners/list/view/?search=resorts+world+bimini&event=1015&award=2",
+                    "image": "http://priscillapi.com/img/portfolio/2017-W3-Silver.png"
+                }
+            ],
             "bulletPoints": {
                 "client": "Resorts World Bimini",
                 "agency": "Worldmedia Interactive",
@@ -32,18 +47,33 @@
             "title": "El Dorado",
             "supTitle": "Work File",
             "subTitle": "Website | Landing Page | Banner",
-            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
+            "highlights": [
+                "Booking flow algorithm",
+                "Website animations",
+                "Interactive map",
+                "X-Large Pencil dropdown banner"
+            ],
             "description":
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
+                "FIVE STAR GOURMET INCLUSIVE® LUXURY SPA RESORTS IN MEXICO’S BREATHTAKING RIVIERA MAYA.",
             "image": {
-                "main": "http://priscillapi.com/img/test/eldorado-desktop.jpg",
+                "main": "http://priscillapi.com/img/portfolio/eldorado-desktop.jpg",
                 "teaser": "/img/teaser-eldorado.jpg"
             },
-            "link": {
-                "url": "#",
-                "label": "Learn More"
-            },
-            "technologies": ["HTML", "CSS", "JS"],
+            "links": [
+                {
+                    "url": "https://www.eldoradosparesorts.com/",
+                    "label": "Visit Website"
+                },
+                {
+                    "url": "/WMI/Karsima/LandingPages/ElDorado/",
+                    "label": "View Landing Page"
+                },
+                {
+                    "url": "/WMI/Karsima/Banner/",
+                    "label": "View Banner"
+                }
+            ],
+            "technologies": ["Sass", "JS", "jQuery", "BEM", "GSAP"],
             "recognitions": [],
             "bulletPoints": {
                 "client": "Karisma",
@@ -59,18 +89,28 @@
             "title": "Generations",
             "supTitle": "Work File",
             "subTitle": "Website | Landing Page",
-            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
+            "highlights": [
+                "Booking flow algorithm",
+                "Website animations",
+                "Interactive map"
+            ],
             "description":
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
+                "FIVE STAR GOURMET INCLUSIVE® FOR THE WHOLE FAMILY IN MEXICO’S BREATHTAKING RIVIERA MAYA",
             "image": {
-                "main": "http://priscillapi.com/img/test/generations-desktop.jpg",
+                "main": "http://priscillapi.com/img/portfolio/generations-desktop.jpg",
                 "teaser": "/img/teaser-generations.jpg"
             },
-            "link": {
-                "url": "#",
-                "label": "Learn More"
-            },
-            "technologies": ["HTML", "CSS", "JS"],
+            "links": [
+                {
+                    "url": "https://www.generationsresortshotels.com/",
+                    "label": "Visit Website"
+                },
+                {
+                    "url": "/WMI/Karsima/LandingPages/Generations/",
+                    "label": "View Landing Page"
+                }
+            ],
+            "technologies": ["Sass", "JS", "jQuery", "BEM", "GSAP"],
             "recognitions": [],
             "bulletPoints": {
                 "client": "Karisma",
@@ -86,18 +126,30 @@
             "title": "NightPro",
             "supTitle": "Work File",
             "subTitle": "Website | Emails",
-            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
+            "highlights": [
+                "Designing email templates"
+            ],
             "description":
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
+                "Simple powerful venue management software.",
             "image": {
-                "main": "http://priscillapi.com/img/test/nightpro-desktop.jpg",
+                "main": "http://priscillapi.com/img/portfolio/nightpro-desktop.jpg",
                 "teaser": "/img/teaser-nightpro.jpg"
             },
-            "link": {
-                "url": "#",
-                "label": "Learn More"
-            },
-            "technologies": ["HTML", "CSS", "JS"],
+            "links": [
+                {
+                    "url": "http://www.nightpro.co/",
+                    "label": "Visit Website"
+                },
+                {
+                    "url": "/NightPro/Emails/TicketConfirmation/",
+                    "label": "View Ticket Confirmation Email"
+                },
+                {
+                    "url": "/NightPro/Emails/TableConfirmation/",
+                    "label": "View Table Confirmation Email"
+                }
+            ],
+            "technologies": ["Sass", "JS", "jQuery", "Express", "Angular"],
             "recognitions": [],
             "bulletPoints": {
                 "client": "",
@@ -113,18 +165,22 @@
             "title": "Volkswagen",
             "supTitle": "Work File",
             "subTitle": "Website",
-            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
+            "highlights": [
+                "Custom WordPress Theme"
+            ],
             "description":
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
+                "Has crecer tu negocio con Volkswagen Vehículos Comerciales. Conoce Amarok, Caddy, Saveiro, Transporter y Crafter. Accede a información de servicio postventa y ¡mucho más!",
             "image": {
-                "main": "http://priscillapi.com/img/test/vw-desktop.jpg",
+                "main": "http://priscillapi.com/img/portfolio/vw-desktop.jpg",
                 "teaser": "/img/teaser-vw.jpg"
             },
-            "link": {
-                "url": "#",
-                "label": "Learn More"
-            },
-            "technologies": ["HTML", "CSS", "JS"],
+            "links": [
+                {
+                    "url": "/M8/VW/",
+                    "label": "View Website"
+                }
+            ],
+            "technologies": ["Sass", "JS", "jQuery", "PHP"],
             "recognitions": [],
             "bulletPoints": {
                 "client": "Volkswagen",
@@ -140,18 +196,26 @@
             "title": "BUPA",
             "supTitle": "Work File",
             "subTitle": "Website | Quote Engine",
-            "intro": "Ut malesuada lectus non sem accumsan sagittis.",
+            "highlights": [
+                "Custom Quote Engine"
+            ],
             "description":
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium, erat accumsan semper ullamcorper, augue est tincidunt sapien, non interdum velit tortor in risus. Ut malesuada lectus non sem accumsan sagittis. Mauris interdum tortor libero, vitae mattis enim mollis in.",
+                "Bupa es la aseguradora de salud internacional con más de 30 años de experiencia en América Latina. Conozca nuestros planes. Cotice en línea.",
             "image": {
-                "main": "http://priscillapi.com/img/test/bupa-desktop.jpg",
+                "main": "http://priscillapi.com/img/portfolio/bupa-desktop.jpg",
                 "teaser": "/img/teaser-bupa.jpg"
             },
-            "link": {
-                "url": "#",
-                "label": "Learn More"
-            },
-            "technologies": ["HTML", "CSS", "JS"],
+            "links": [
+                {
+                    "url": "/M8/BUPA/",
+                    "label": "View Website"
+                },
+                {
+                    "url": "/M8/BUPA/QuoteEngine/",
+                    "label": "View Quote Engine"
+                }
+            ],
+            "technologies": ["HTML", "CSS", "JS", "jQuery"],
             "recognitions": [],
             "bulletPoints": {
                 "client": "BUPA",
@@ -162,6 +226,51 @@
                 "role": "Web Developer"
             }
         }
+    ],
+    "scrollText": [
+        {
+            "ID": "d-scroll-text__technologies",
+            "items": [
+                "Express",
+                "SQL",
+                "GSAP",
+                "Handlebars",
+                "HTML5",
+                "CSS3",
+                "Sass",
+                "JavaScript",
+                "jQuery",
+                "PHP",
+                "React",
+                "WordPress",
+                "AWS",
+                "AngularJS",
+                "Node",
+                "JSON",
+                "API",
+                "Gulp",
+                "JAVA",
+                "C++",
+                "Photoshop",
+                "Illustrator",
+                "Sublime",
+                "Sketch",
+                "Terminal",
+                "GIT"
+            ]
+        },
+        {
+            "ID": "d-scroll-text__names",
+            "items": [
+                "Priscilla",
+                "Pi",
+                "Web Developer",
+                "Web Designer",
+                "Front-End Developer",
+                "Unicorn",
+                "Foodie",
+                "Pizza Enthusiast"
+            ]
+        }
     ]
 }
-  

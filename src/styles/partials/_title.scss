@@ -1,0 +1,58 @@
+.c-title {
+    height: 165px;
+    color: #dddddd87;
+    // margin-top: 2rem;
+    transition: all 5s ease;
+    position: relative;
+
+    @media only screen and (max-width: 768px) {
+        height: 24vw;
+    }
+
+    @media only screen and (max-width: 640px) {
+        height: 30vw;
+    }
+
+    @media only screen and (max-width: 425px) {
+        height: 40vw;
+    }
+    
+    &--in-view {
+      color: #e7ee4b52;
+    }
+    
+    h1 {
+        position: absolute;
+        top: 0;
+        font-size: 13rem;
+        line-height: 13rem;
+        margin: 0;
+        z-index: -9;
+        
+        @media only screen and (max-width: 1024px) {
+            font-size: 12rem;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            font-size: 25vw;
+        }
+    }
+
+    &--left {
+      h1 {
+        left: -35px;
+        @media only screen and (max-width: 768px) {
+            left: -15px;
+        }
+      }
+    }
+
+    &--right {
+      h1 {
+        right: -25px;
+        @media only screen and (max-width: 768px) {
+            right: -15px;
+        }
+      }
+    }
+  }

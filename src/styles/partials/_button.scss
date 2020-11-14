@@ -1,0 +1,23 @@
+.c-button {
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #2d2d2d;
+      background: #2d2d2d;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #ffffff;
+      margin-top: 20px;
+      -webkit-transition: background .5s ease;
+      -moz-transition: background .5s ease;
+      -o-transition: background .5s ease;
+      transition: background .5s ease;
+      
+      &:hover {
+        color: #2d2d2d;
+        background: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+    }
+  }
