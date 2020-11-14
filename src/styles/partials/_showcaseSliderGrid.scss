@@ -2,10 +2,10 @@
 // GRID LAYOUT 
 // ===================================================================
 .c-showcase-slider {
-    height: 500px;
+    min-height: 600px;
     $self: &;
     
-    @media (max-width: 1024px) {
+    @media only screen and (max-width: 1024px) {
       height: auto;
     }
   
@@ -62,7 +62,7 @@
     
    
     //   TABLET
-    @media (max-width: 1024px) {
+    @media only screen and (max-width: 1024px) {
         &__slide {
           grid-template-columns: 0.55fr 4fr 0.25fr;
           grid-template-areas: 
@@ -105,7 +105,7 @@
     }
     
     //   MOBILE
-    @media (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
         &__slide {
           display: block;
           // height: 125vh;
@@ -121,12 +121,10 @@
         &-nav {
           display: none;
         }
-        // &-recognitions {
-        //   grid-row: 4/5;
-        //   grid-column: 1/2;
-        //   justify-self: start;
-        //   align-self: start;
-        // }
+        &-recognitions {
+          grid-row: 1/2;
+          grid-column: 4/5;
+        }
         // &-main {
         //   grid-row: 1/2;
         //   grid-column: 1/2;

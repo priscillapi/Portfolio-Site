@@ -3,6 +3,7 @@ import React from "react";
 import ContactInfo from '../components/ContactInfo';
 import ScrollText from '../components/ScrollText';
 import ScrollDown from '../components/ScrollDown';
+import SocialMedia from '../components/SocialMedia';
 
 const Header = () => {
     const headerSection = (
@@ -17,7 +18,10 @@ const Header = () => {
             <ContactInfo />
           </div>
         </div>
-        <ScrollDown />
+        <div className='l-container'>
+          <SocialMedia />
+        </div>
+        <ScrollDown scrollLocation='about'/>
       </div>
     );
 

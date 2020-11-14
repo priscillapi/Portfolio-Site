@@ -31,10 +31,12 @@ class ScrollText extends Component {
     }
 
     renderItems() {
+        console.log(this.state);
         let items = [];
         this.state.data.map((scrollGroup) => {
             if(scrollGroup.ID === this.props.groupID) {
-                items = scrollGroup.items.map((item, index) => (
+                let scrollGroupItems = (scrollGroup.ID === "d-scroll-text__technologies") ? scrollGroup.items.reverse() : scrollGroup.items;
+                items = scrollGroupItems.map((item, index) => (
                     <div className="c-scroll-text__item">
                         <span>{item}</span>
                     </div>

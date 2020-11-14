@@ -8,7 +8,8 @@ const DIST_DIR = __dirname + '/dist';
 
 module.exports = {
   entry: [
-    SRC_DIR + '/index.jsx'
+    SRC_DIR + '/index.jsx',
+    SRC_DIR + '/about.jsx'
   ],
   output: {
     path: DIST_DIR,
@@ -57,10 +58,16 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: SRC_DIR + '/index.html',
-      filename: './index.html',
-    }),
+    new HtmlWebpackPlugin(
+      {
+        template: SRC_DIR + '/index.html',
+        filename: './index.html',
+      },
+      {
+        template: SRC_DIR + '/about.html',
+        filename: './about.html',
+      }
+    ),
     new MiniCssExtractPlugin({
       filename: devMode ? '[name].css' : '[name].[hash].css',
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',

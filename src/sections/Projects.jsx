@@ -10,7 +10,7 @@ class Projects extends Component {
     // const inViewClassName = (this.props.isFullyInViewport || this.props.isAboveViewport) ? " l-section--in-view" : "";
     // const classList = 'l-section l-section--projects' + inViewClassName; 
     const inViewClassName = (true) ? " l-section--in-view" : "";
-    const classList = 'l-section l-section--projects' + inViewClassName; 
+    const classList = 'l-section l-section--small-margin-btm l-section--projects' + inViewClassName; 
     return classList;
   }
   render() {

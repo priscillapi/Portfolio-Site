@@ -2,17 +2,18 @@
     height: 165px;
     color: #dddddd87;
     // margin-top: 2rem;
-    transition: all 0.3s ease;
+    transition: all 5s ease;
+    position: relative;
 
-    @media (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
         height: 24vw;
     }
 
-    @media (max-width: 640px) {
+    @media only screen and (max-width: 640px) {
         height: 30vw;
     }
 
-    @media (max-width: 425px) {
+    @media only screen and (max-width: 425px) {
         height: 40vw;
     }
     
@@ -28,11 +29,11 @@
         margin: 0;
         z-index: -9;
         
-        @media (max-width: 1024px) {
+        @media only screen and (max-width: 1024px) {
             font-size: 12rem;
         }
         
-        @media (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
             font-size: 25vw;
         }
     }
@@ -40,7 +41,7 @@
     &--left {
       h1 {
         left: -35px;
-        @media (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
             left: -15px;
         }
       }
@@ -49,7 +50,7 @@
     &--right {
       h1 {
         right: -25px;
-        @media (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
             right: -15px;
         }
       }

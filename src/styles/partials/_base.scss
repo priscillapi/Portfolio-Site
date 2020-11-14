@@ -22,6 +22,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #2d2d2d;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -96,7 +97,7 @@ ul {
 
 .mobile-only {
   display: none;
-  @media (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     display: block;
   }
 }
@@ -105,14 +106,14 @@ ul {
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     h2 {
       font-size: 1.75rem;
     }
 }
 
 // TABLET
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   h1 {
     font-size: 4.5rem;
     line-height: 5rem;
@@ -122,9 +123,15 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   h1 {
       font-size: 3.5rem;
       line-height: 3.6rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  h2, h3 {
+    font-size: 1rem;
   }
 }

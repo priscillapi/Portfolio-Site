@@ -93,12 +93,12 @@
         }
       }
 
-      @media (max-width: 768px) {
+      @media only screen and (max-width: 768px) {
         font-size: 12vw;
       }
 
       #{ $self }__wrapper--primary & {
-        font-size: 10vw;
+        font-size: 6vw;
         line-height: 1.1;
         text-transform: uppercase;
         & span {
@@ -106,12 +106,12 @@
             color: #444;
           }
         }
-        @media (max-width: 768px) {
-          font-size: 13vw;
+        @media only screen and (max-width: 768px) {
+          font-size: 9vw;
         }
       }
 
-      @media (min-width: 1800px) {
+      @media only screen and (min-width: 1800px) {
         font-size: 10.13rem;
       }
 
@@ -124,16 +124,16 @@
         top: 3.75vw;
         position: absolute;
 
-        @media (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
           margin: 0 1.85vw;
           font-size: 6vw;
           top: 5.75vw;
         }
 
         #{ $self }__wrapper--primary & {
-          top: 2.75vw;
-          @media (max-width: 768px) {
-            top: 4vw;
+          top: 0.75vw;
+          @media only screen and (max-width: 768px) {
+            top: 1.75vw;
           }
         }
       }

@@ -7,7 +7,10 @@ class ScrollDown extends Component {
     }
 
     onScrollDown() {
-
+        let target = '#' + this.props.scrollLocation;
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        },1000);
     }
 
     render() {

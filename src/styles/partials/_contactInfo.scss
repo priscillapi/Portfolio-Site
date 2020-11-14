@@ -1,3 +1,10 @@
 .c-contact-info {
     $self: &;
+
+    @media only screen and (max-width: 525px) {
+        p {
+            display: none;
+        }
+        padding: 2.5rem !important;
+    }
 }
